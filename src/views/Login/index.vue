@@ -5,7 +5,11 @@
     <!-- /导航栏 -->
     <!-- 表单 -->
     <van-form @submit="onSubmit">
-      <van-field v-model.trim="username" name="name" placeholder="请输入账号" />
+      <van-field
+        v-model.trim="username"
+        name="username"
+        placeholder="请输入账号"
+      />
       <van-field
         v-model.trim="password"
         type="password"
@@ -35,11 +39,13 @@ export default {
   },
   methods: {
     async onSubmit (values) {
+      // console.log(values)
       if (this.username === '' || this.password === '') return this.$toast('用户名或密码不能为空')
       try {
         const { data } = await login(values)
         console.log(data)
         this.$toast.success('登录成功')
+        this.$store.commit('setUser', data.body)
         this.$router.back()
       } catch (err) {
         console.log(err)

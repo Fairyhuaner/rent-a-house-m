@@ -5,13 +5,24 @@ import request from '@/utils/request'
  * @param {*} param0
  * @returns promise
  */
-export const login = ({ name, password }) => {
+export const login = ({ username, password }) => {
   return request({
     method: 'POST',
     url: '/user/login',
     data: {
-      name,
+      username,
       password
     }
+  })
+}
+
+/**
+ * 获取用户信息
+ * @returns promise
+ */
+export const getUserInfo = () => {
+  return request({
+    method: 'GET',
+    url: '/user'
   })
 }
