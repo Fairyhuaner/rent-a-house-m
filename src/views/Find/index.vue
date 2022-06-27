@@ -1,12 +1,12 @@
 <template>
-  <div class="login-page">
-    <h3>登录</h3>
+  <div class="find-page">
+    <h3>找房</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LoginPage',
+  name: 'FindPage',
   created () { },
   data () {
     return {}

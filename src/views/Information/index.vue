@@ -1,12 +1,12 @@
 <template>
-  <div class="login-page">
-    <h3>登录</h3>
+  <div class="information-page">
+    <h3>资讯</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LoginPage',
+  name: 'InformationPage',
   created () { },
   data () {
     return {}

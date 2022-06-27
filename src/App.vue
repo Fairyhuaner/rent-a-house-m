@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div class="box">111</div>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
+  name: 'App',
   created () { },
   data () {
     return {}
@@ -19,9 +20,4 @@ export default {
 </script>
 
 <style scoped lang='less'>
-.box {
-  width: 375px;
-  height: 667px;
-  background-color: pink;
-}
 </style>
