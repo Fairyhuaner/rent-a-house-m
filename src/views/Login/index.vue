@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <!-- 导航栏 -->
-    <van-nav-bar title="账号登录" left-arrow @click-left="onClickLeft" />
+    <van-nav-bar title="账号登录" left-arrow />
     <!-- /导航栏 -->
     <!-- 表单 -->
     <van-form @submit="onSubmit">
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { login } from '@/api/user'
 export default {
   name: 'LoginPage',
   created () { },
@@ -33,9 +34,17 @@ export default {
     }
   },
   methods: {
-    onSubmit (values) {
+    async onSubmit (values) {
       if (this.username === '' || this.password === '') return this.$toast('用户名或密码不能为空')
-      this.$toast('登录成功')
+      try {
+        const { data } = await login(values)
+        console.log(data)
+        this.$toast.success('登录成功')
+        this.$router.back()
+      } catch (err) {
+        console.log(err)
+        this.$toast.fail('登录失败，请稍后重试')
+      }
     }
   },
   computed: {},
