@@ -3,8 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Vant from 'vant'
-import 'vant/lib/index.css'
-// import 'postcss-pxtorem'
+// 引入全部样式
+import 'vant/lib/index.less'
+// 实现rem适配
 import 'amfe-flexible'
 
 Vue.use(Vant)
