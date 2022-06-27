@@ -8,7 +8,7 @@
           <img class="my-avatar" src="~@/assets/img/avatar.png" alt="icon" />
         </div>
         <div class="my-user">
-          <div class="my-name">{{userInfo.nickname}}</div>
+          <div class="my-name">{{ userInfo.nickname }}</div>
           <div class="my-edit-me">
             <van-button type="primary" size="small" @click="onLogout"
               >退出</van-button
