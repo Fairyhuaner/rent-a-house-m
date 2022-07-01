@@ -1,11 +1,15 @@
 <template>
   <div class="my-page">
     <!-- 已登录 -->
-    <div class="header" v-if="user">
+    <div class="header" v-if="user && user.token">
       <div class="bg"></div>
       <div class="my-info">
         <div class="my-myIcon">
-          <img class="my-avatar" src="~@/assets/img/avatar.png" alt="icon" />
+          <img
+            class="my-avatar"
+            :src="'http://liufusong.top:8080' + userInfo.avatar"
+            alt="icon"
+          />
         </div>
         <div class="my-user">
           <div class="my-name">{{ userInfo.nickname }}</div>
@@ -87,6 +91,7 @@ export default {
         .then(() => {
           // on confirm
           this.$store.commit('setUser', null)
+          this.$store.commit('setCity', '北京')
         })
         .catch(() => {
           // on cancel

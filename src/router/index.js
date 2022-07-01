@@ -6,6 +6,8 @@ const Information = () => import('@/views/Information')
 const Find = () => import('@/views/Find')
 const My = () => import('@/views/My')
 const Login = () => import('@/views/Login')
+const City = () => import('@/views/City')
+const Renting = () => import('@/views/Renting')
 
 Vue.use(VueRouter)
 
@@ -41,6 +43,16 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
+  },
+  {
+    path: '/city',
+    name: 'city',
+    component: City
+  },
+  {
+    path: '/renting',
+    name: 'renting',
+    component: Renting
   }
 ]
 

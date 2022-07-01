@@ -9,11 +9,11 @@
       </van-tabbar-item>
       <van-tabbar-item replace to="/find">
         <div class="icon"><i class="iconfont icon-findHouse"></i></div>
-        <p>首页</p>
+        <p>找房</p>
       </van-tabbar-item>
       <van-tabbar-item replace to="/information">
         <div class="icon"><i class="iconfont icon-infom"></i></div>
-        <p>首页</p>
+        <p>资讯</p>
       </van-tabbar-item>
       <van-tabbar-item replace to="/my">
         <div class="icon"><i class="iconfont icon-my"></i></div>
