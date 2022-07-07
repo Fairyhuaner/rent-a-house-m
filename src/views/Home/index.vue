@@ -22,7 +22,12 @@
           </van-button>
         </template>
         <template #right>
-          <van-icon name="location-o" size="18" class="map" />
+          <van-icon
+            name="location-o"
+            size="18"
+            class="map"
+            @click="$router.push('/map')"
+          />
         </template>
       </van-nav-bar>
     </div>
@@ -94,7 +99,8 @@ export default {
   data () {
     return {
       SwiperImages: [],
-      rentingGroupsInfo: []
+      rentingGroupsInfo: [],
+      query: []
     }
   },
   methods: {
@@ -169,6 +175,12 @@ export default {
 .nav {
   height: 250px;
 }
+.group {
+  /deep/ .van-grid-item__content {
+    flex-direction: row;
+  }
+}
+
 .van-nav-bar,
 .group {
   padding-bottom: 20px;

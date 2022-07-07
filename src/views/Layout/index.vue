@@ -7,7 +7,7 @@
         <div class="icon"><i class="iconfont icon-ind"></i></div>
         <p>首页</p>
       </van-tabbar-item>
-      <van-tabbar-item replace to="/find">
+      <van-tabbar-item replace to="/renting">
         <div class="icon"><i class="iconfont icon-findHouse"></i></div>
         <p>找房</p>
       </van-tabbar-item>

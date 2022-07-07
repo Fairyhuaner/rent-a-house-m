@@ -3,11 +3,11 @@ import VueRouter from 'vue-router'
 import Layout from '@/views/Layout'
 const Home = () => import('@/views/Home')
 const Information = () => import('@/views/Information')
-const Find = () => import('@/views/Find')
 const My = () => import('@/views/My')
 const Login = () => import('@/views/Login')
 const City = () => import('@/views/City')
 const Renting = () => import('@/views/Renting')
+const Map = () => import('@/views/Map')
 
 Vue.use(VueRouter)
 
@@ -23,9 +23,9 @@ const routes = [
         component: Home
       },
       {
-        path: 'find',
-        name: 'find',
-        component: Find
+        path: '/renting',
+        name: 'renting',
+        component: Renting
       },
       {
         path: 'information',
@@ -50,9 +50,9 @@ const routes = [
     component: City
   },
   {
-    path: '/renting',
-    name: 'renting',
-    component: Renting
+    path: '/map',
+    name: 'map',
+    component: Map
   }
 ]
 

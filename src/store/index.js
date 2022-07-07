@@ -10,7 +10,7 @@ export default new Vuex.Store({
   state: {
     user: {},
     city: '北京',
-    areaValue: ''
+    areaValue: 'AREA|88cff55c-aaa4-e2e0'
   },
   getters: {
   },

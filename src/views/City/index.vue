@@ -119,7 +119,7 @@ export default {
       this.theCurrentCity = city
       this.$store.commit('setCity', city)
       this.$store.commit('setAreaValue', value)
-      this.$router.push('/home')
+      this.$router.back()
     }
   },
   computed: {},
