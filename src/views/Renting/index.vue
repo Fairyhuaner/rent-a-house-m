@@ -32,10 +32,7 @@
     <van-dropdown-menu ref="filterMenu" v-show="false"></van-dropdown-menu>
     <!-- 选择 -->
     <div class="hasFixed">
-      <van-dropdown-menu
-        class="total-menu"
-        active-color="#21b97a"
-      >
+      <van-dropdown-menu class="total-menu" active-color="#21b97a">
         <!-- 区域 -->
         <van-dropdown-item title="区域" ref="areaDropdown">
           <van-loading
@@ -102,6 +99,7 @@
             position="right"
             :style="{ height: '100%', width: '80%' }"
             @close="filterClosePopup"
+            class="filter-popup"
           >
             <!-- 布局 -->
             <GridFilterBox
@@ -146,16 +144,23 @@
     </div>
     <!-- 选择区域 -->
     <!-- 主要内容 -->
-    <van-loading type="spinner" v-show="mainShow" style="text-align: center" />
-    <van-list
-      v-model="loading"
-      :finished="finished"
-      finished-text="没有更多了"
-      @load="onLoad"
-    >
-      <HousesList :housesList="housesList"></HousesList>
-    </van-list>
-    <van-empty description="暂无房源" v-show="housingDateShow" />
+    <div class="main-footer">
+      <van-loading
+        type="spinner"
+        v-show="mainShow"
+        style="text-align: center"
+      />
+      <van-list
+        v-model="loading"
+        :finished="finished"
+        finished-text="没有更多了"
+        @load="onLoad"
+      >
+        <HousesList :housesList="housesList"></HousesList>
+      </van-list>
+      <van-empty description="暂无房源" v-show="housingDateShow" />
+    </div>
+    <!-- /主要内容 -->
   </div>
 </template>
 
@@ -454,12 +459,17 @@ export default {
   height: 100px;
   font-size: 36px;
 }
+// 主要内容的样式
+.main-footer {
+  // padding-bottom: 100px;
+  margin-bottom: 100px;
+}
 // 吸顶的样式
 .hasFixed {
   position: sticky;
   top: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 1;
+  z-index: 999;
 }
 </style>
