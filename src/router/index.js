@@ -8,6 +8,7 @@ const Login = () => import('@/views/Login')
 const City = () => import('@/views/City')
 const Renting = () => import('@/views/Renting')
 const Map = () => import('@/views/Map')
+const Detail = () => import('@/views/Detail')
 
 Vue.use(VueRouter)
 
@@ -53,6 +54,12 @@ const routes = [
     path: '/map',
     name: 'map',
     component: Map
+  },
+  {
+    path: '/detail/:houseCode',
+    name: 'detail',
+    component: Detail,
+    props: true
   }
 ]
 

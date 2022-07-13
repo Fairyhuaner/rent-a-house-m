@@ -6,6 +6,14 @@
       :desc="item.desc"
       :title="item.title"
       class="van-card-house"
+      @click="
+        $router.push({
+          name: 'detail',
+          params: {
+            houseCode: item.houseCode
+          },
+        })
+      "
     >
       <template #thumb>
         <van-image

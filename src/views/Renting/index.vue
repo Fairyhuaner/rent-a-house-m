@@ -28,7 +28,8 @@
       </van-nav-bar>
     </div>
     <!-- /导航栏 -->
-    <!-- 增加一个额外的标签 经过测试 还是这个标签靠谱 可以成功获取DOM元素并成功模拟出点击事件 解决两个遮罩层覆盖需要被点击两次的问题-->
+    <!-- 增加一个额外的标签 经过测试 还是这个标签靠谱 可以成功获取DOM元素并成功模拟出点击事件 解决两个遮罩层覆盖需要被点击两次的问题-->改了
+    <!-- 在筛选的弹出层上也可以加一行代码，实现这个两个遮罩层的bug， v-if="show" 不过懒得改了 -->
     <van-dropdown-menu ref="filterMenu" v-show="false"></van-dropdown-menu>
     <!-- 选择 -->
     <div class="hasFixed">
@@ -245,7 +246,7 @@ export default {
         this.filterHousesCondition(data.body.oriented, this.oriented)
         this.filterHousesCondition(data.body.floor, this.floor)
         this.filterHousesCondition(data.body.characteristic, this.characteristic)
-        // console.log(this.areaList)
+        console.log(this.areaList)
         this.menuShow = false
       } catch (err) {
         console.log(err)

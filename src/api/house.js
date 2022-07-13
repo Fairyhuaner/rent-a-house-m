@@ -39,3 +39,14 @@ export const getHouses = ({ cityId, area, subway, rentType, price, more, roomTyp
     }
   })
 }
+/**
+ * 查询房屋具体信息
+ * @param {*} id
+ * @returns
+ */
+export const getHouseDetails = (id) => {
+  return request({
+    method: 'GET',
+    url: `/houses/${id}`
+  })
+}
